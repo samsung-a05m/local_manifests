@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-	<remote name="a05m-repo-ssh" fetch="ssh://git@github.com/Samsung-Galaxy-A05" clone-depth="1" revision="lineage-24.0" />
 	<remote name="a05m-repo-pub" fetch="https://github.com/Samsung-Galaxy-A05" clone-depth="1" revision="lineage-24.0" />
-	<remote name="LineageOS-git" fetch="https://github.com/LineageOS" clone-depth="1" revision="lineage-23.2" />
-	<remote name="crdroid-git" fetch="https://github.com/crdroidandroid" clone-depth="1" revision="16.0" />
-
-	<!-- Removal -->
-	<!--<remove-project path="kernel/configs" /> -->
+	<remote name="LineageOS-git" fetch="https://github.com/LineageOS" clone-depth="1" revision="lineage-24.0" />
 
 	<!-- Dependencies -->
 	<project path="hardware/samsung" name="android_hardware_samsung" remote="LineageOS-git" />
-	<project path="hardware/mediatek" name="android_hardware_mediatek" remote="crdroid-git" />
+	<project path="hardware/mediatek" name="android_hardware_mediatek" remote="a05m-repo-pub" />
 	<project path="device/mediatek/sepolicy_vndr" name="android_device_mediatek_sepolicy_vndr" remote="LineageOS-git" />
-	<!--<project path="kernel/configs" name="android_kernel_configs" remote="a05m-repo-pub" /> -->
 
 	<!-- a05m stuffs -->
-	<project path="device/samsung/a05m" name="android_device_samsung_a05m" remote="a05m-repo-ssh" />
+	<project path="device/samsung/a05m" name="android_device_samsung_a05m" remote="a05m-repo-pub" />
 	<project path="device/samsung/a05m-kernel" name="android_device_samsung_a05m-kernel" remote="a05m-repo-pub" />
-	<project path="vendor/samsung/a05m" name="android_vendor_samsung_a05m" remote="a05m-repo-ssh" />
+	<project path="vendor/samsung/a05m" name="android_vendor_samsung_a05m" remote="a05m-repo-pub" />
 	<project path="vendor/samsung/a05m-tee" name="android_vendor_samsung_a05m-tee" revision="main" remote="a05m-repo-pub" />
-	<project path="packages/apps/SamsungParts" name="android_packages_apps_SamsungParts" revision="master" remote="a05m-repo-ssh" />
+
+	<!-- a05m specific configuration -->
+	<project path="packages/apps/SamsungParts" name="android_packages_apps_SamsungParts" revision="master" remote="a05m-repo-pub" />
 
 	<!-- a05m camera and offline charging -->
-	<project path="vendor/samsung/kpoc_charger" name="android_vendor_samsung_kpoc_charger" revision="main" remote="a05m-repo-ssh" />
-	<project path="vendor/samsung/wing-camera" name="android_vendor_samsung_wing-camera" revision="main" remote="a05m-repo-ssh" />
+	<project path="vendor/samsung/kpoc_charger" name="android_vendor_samsung_kpoc_charger" revision="main" remote="a05m-repo-pub" />
+	<project path="vendor/samsung/wing-camera" name="android_vendor_samsung_wing-camera" revision="main" remote="a05m-repo-pub" />
 
 </manifest>
