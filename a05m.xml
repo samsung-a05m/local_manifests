@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-	<remote name="a05m-repo-pub" fetch="https://github.com/Samsung-Galaxy-A05" clone-depth="1" revision="lineage-24.0" />
+	<remote name="a05m-repo-pub" fetch="https://github.com/samsung-a05m" clone-depth="1" revision="lineage-24.0" />
 	<remote name="LineageOS-git" fetch="https://github.com/LineageOS" clone-depth="1" revision="lineage-24.0" />
 
 	<!-- Dependencies -->
