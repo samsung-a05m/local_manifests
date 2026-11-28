@@ -2,7 +2,8 @@
 <manifest>
 
 	<remote name="a05m-org" fetch="https://github.com/samsung-a05m" clone-depth="1" revision="lineage-24.0" />
-	<remote name="LineageOS-git" fetch="https://github.com/LineageOS" clone-depth="1" revision="lineage-24.0" />=
+	<remote name="LineageOS-git" fetch="https://github.com/LineageOS" clone-depth="1" revision="lineage-24.0" /> 
+	<remote name="mtg-git" fetch="https://github.com/MindTheGapps" clone-depth="1" revision="cinnamonbun" />
 
 	<!-- Dependencies -->
 	<project path="hardware/samsung" name="android_hardware_samsung" remote="LineageOS-git" />
@@ -11,7 +12,7 @@
 
 	<!-- a05m stuffs -->
 	<project path="device/samsung/a05m" name="android_device_samsung_a05m" remote="a05m-org" />
-	<project path="device/samsung/a05m-kernel" name="android_device_samsung_a05m-kernel" revision="stock_127" remote="a05m-org" />
+	<project path="device/samsung/a05m-kernel" name="android_device_samsung_a05m-kernel" revision="prebuilt-163" remote="a05m-org" />
 	<project path="vendor/samsung/a05m" name="android_vendor_samsung_a05m" remote="a05m-org" />
 	<project path="vendor/samsung/a05m-tee" name="android_vendor_samsung_a05m-tee" revision="main" remote="a05m-org" />
 
@@ -22,4 +23,8 @@
 	<project path="vendor/samsung/kpoc_charger" name="android_vendor_samsung_kpoc_charger" revision="main" remote="a05m-org" />
 	<project path="vendor/samsung/wing-camera" name="android_vendor_samsung_wing-camera" revision="main" remote="a05m-org" />
 
+	<!-- Optional, GMS -->
+	<!-- <project path="vendor/gapps" name="vendor_gapps" remote="mtg-git" /> -->
+
 </manifest>
+
